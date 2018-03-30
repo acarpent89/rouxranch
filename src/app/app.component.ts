@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  listItems: ListItem[];
-}
-export class ListItem {
-  public imagePath: 'includes/alex1.jpg';
-  // ....
+  title = 'Alex Carpenter\'s Site';
 }
