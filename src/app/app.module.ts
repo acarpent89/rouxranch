@@ -7,10 +7,11 @@ import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatTabsModule, } f
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModel } from '@angular/forms';
 import { HomeModule } from './home/home.module';
+import {SlideshowModule} from 'ng-simple-slideshow';
 import {
   SharedModule,
   FooterComponent,
-  HeaderComponent
+  HeaderComponent,
 } from './shared';
 
 @NgModule({
@@ -25,6 +26,7 @@ import {
     MatTabsModule,
     HomeModule,
     SharedModule,
+    SlideshowModule,
     BrowserAnimationsModule
   ],
   providers: [],

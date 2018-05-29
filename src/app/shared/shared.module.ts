@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './layout/footer.component';
 import { HeaderComponent } from './layout/header.component';
 
+
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: '',

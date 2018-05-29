@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// import our custom theme
+@import 'theme.scss';
+// override md-toolbar
+
+mat-toolbar {
+  &.my-app-toolbar {
+    max-height: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    display:inline-block;
+  }
+}
+// specify theme class eg: <body class="my-theme"> ... </body>
+.my-theme {
+  
+  // use our theme with angular-material-theme mixin
+  @include angular-material-theme($my-app-theme);
+}

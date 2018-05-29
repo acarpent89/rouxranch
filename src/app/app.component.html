@@ -1,21 +1,59 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="./app.custom.js"></script>
+<body>
+    <div id="page-wrap">
 <layout-header></layout-header>
-<mat-tab-group>
-    <mat-tab label="Welcome">
-      <h1>Welcome to Roux Ranch!</h1>
-      <p>Located in Eastern Oregon</p>
-    </mat-tab>
-    <mat-tab label="Our Dogs">
-      <h1>Our Adult Dogs</h1>
-      <p>Twitter</p>
-      <p>Nelson</p>
-      <p>Kashi</p>
-      <p>Other Dog</p>
-    </mat-tab>
-    <mat-tab label="Available Puppies">
-        <h1>Our current litter</h1>
-        <p>No puppies Available</p>
-    </mat-tab>
-    <mat-tab label="About Us">
-    </mat-tab>
-</mat-tab-group>
+
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'dogs')">
+      <img src="../assets/images/pawprint.png">  Our Dogs</button>
+    <button class="tablinks" onclick="openTab(event, 'pastPuppies')">
+      <img src="../assets/images/pawprint.png">  Our Past Puppies</button>
+    <button class="tablinks" onclick="openTab(event, 'otherAnimals')">
+      <img src="../assets/images/pawprint.png">  Other Animals</button>
+    <button class="tablinks" onclick="openTab(event, 'aboutUs')">
+      <img src="../assets/images/pawprint.png">  About Us</button>
+  </div>
+  <div id="dogs" class="tabcontent">
+      <h3>Our Adult Bulldogs</h3>
+      <slideshow [height]="'500px'"
+      [autoPlay]="true"
+      [showArrows]="false"
+      [imageUrls]="dogsUrls"
+      [lazyLoad]="dogsUrls?.length > 1"
+      [autoPlayWaitForLazyLoad]="true">
+    </slideshow>
+  </div>
+
+  <div id="pastPuppies" class="tabcontent">
+      <h3>Our Past Puppies</h3>
+      <slideshow [height]="'500px'"
+      [autoPlay]="true"
+      [showArrows]="false"
+      [imageUrls]="pastPuppyUrls"
+      [lazyLoad]="pastPuppyUrls?.length > 1"
+      [autoPlayWaitForLazyLoad]="true">
+    </slideshow>
+  </div>
+  
+  <div id="otherAnimals" class="tabcontent">
+    <h3>Our Other animals</h3>
+    <slideshow [height]="'500px'"
+      [autoPlay]="true"
+      [showArrows]="false"
+      [imageUrls]="otherAnimalUrls"
+      [lazyLoad]="otherAnimalUrls?.length > 1"
+      [autoPlayWaitForLazyLoad]="true">
+    </slideshow>
+  </div>
+  
+  <div id="aboutUs" class="tabcontent">
+    <h3>About Roux Ranch</h3>
+    <p>Located in Hermiston Oregon.</p>
+  </div>
+
 <layout-footer></layout-footer>
+</div>
+</body>
